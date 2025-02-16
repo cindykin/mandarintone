@@ -1,0 +1,372 @@
+
+
+
+<!-- VERSI 1 HOME -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Berbicara Nada Mandarin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+            text-align: left;
+        }
+
+        p {
+            margin-bottom: 30px;
+            color: #555;
+            text-align: left;
+        }
+
+        .tones-container {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .tone {
+            background-color: #ffefd5;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+        }
+
+        .tone:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .tone span {
+            display: block;
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .tone small {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .history {
+            margin-top: 30px;
+            color: #007bff;
+            text-decoration: none;
+            font-size: 14px;
+            display: block;
+            text-align: left;
+        }
+
+        .history:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 767px) {
+            .tones-container {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .tone {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Latihan Berbicara Nada Mandarin</h1>
+        <p>Pilih nada yang ingin kamu pelajari</p>
+
+        <div class="tones-container">
+            <div class="tone" onclick="selectTone(1)">
+                <span>ā</span>
+                <small>Nada 1</small>
+            </div>
+            <div class="tone" onclick="selectTone(2)">
+                <span>á</span>
+                <small>Nada 2</small>
+            </div>
+            <div class="tone" onclick="selectTone(3)">
+                <span>ǎ</span>
+                <small>Nada 3</small>
+            </div>
+            <div class="tone" onclick="selectTone(4)">
+                <span>à</span>
+                <small>Nada 4</small>
+            </div>
+        </div>
+
+        <a href="#" class="history">Cek riwayat &gt;&gt;</a>
+    </div>
+
+    <script>
+        function selectTone(tone) {
+            alert(`Nada ${tone} dipilih!`);
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- versi 1 ISI -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan Nada Mandarin</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    .container {
+      max-width: 480px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      color: #007BFF;
+    }
+
+    p {
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .character-swipe {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .character-item {
+      flex: 0 0 100%;
+      scroll-snap-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #f1f1f1;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .character {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .tone {
+      font-size: 1.5rem;
+      color: #666;
+    }
+
+    .record-section {
+      margin-top: 20px;
+    }
+
+    .record-button {
+      background-color: #FF4D4F;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    .record-button:hover {
+      background-color: #d9363e;
+    }
+
+    .toggle-method {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .toggle-button {
+      flex: 1;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .toggle-button.active {
+      background-color: #0056b3;
+    }
+
+    .status {
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    .progress-bar {
+      width: 80%;
+      height: 10px;
+      background-color: #ddd;
+      border-radius: 5px;
+      margin: 10px auto;
+      overflow: hidden;
+      position: relative;
+      display: none;
+    }
+
+    .progress {
+      height: 100%;
+      width: 0;
+      background-color: #007BFF;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mari Latihan Nada 3</h1>
+    <p>Geser untuk melihat variasi nada dan klik tombol Rekam untuk mencoba</p>
+
+    <!-- Karakter dengan Swipe Gesture -->
+    <div class="character-swipe">
+      <div class="character-item">
+        <p class="character">阿</p>
+        <p class="tone">ā</p>
+      </div>
+      <div class="character-item">
+        <p class="character">妈</p>
+        <p class="tone">mā</p>
+      </div>
+      <div class="character-item">
+        <p class="character">他</p>
+        <p class="tone">tā</p>
+      </div>
+    </div>
+
+    <!-- Pilihan Metode Rekaman -->
+    <div class="toggle-method">
+      <button class="toggle-button active" id="live-record">Rekam Langsung</button>
+      <button class="toggle-button" id="audio-file">Pilih Audio</button>
+    </div>
+
+    <!-- Tombol Rekam -->
+    <div class="record-section">
+      <button class="record-button" onclick="startRecording()">Rekam</button>
+      <div class="progress-bar" id="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+      <div class="status">
+        <p class="recording" id="recording-status">🔴 Sedang merekam...</p>
+        <p class="success" id="success-status">✅ Sukses merekam! Rekaman sedang diproses...</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Logika untuk toggle metode rekaman
+    const liveRecordButton = document.getElementById('live-record');
+    const audioFileButton = document.getElementById('audio-file');
+
+    liveRecordButton.addEventListener('click', () => {
+      liveRecordButton.classList.add('active');
+      audioFileButton.classList.remove('active');
+    });
+
+    audioFileButton.addEventListener('click', () => {
+      audioFileButton.classList.add('active');
+      liveRecordButton.classList.remove('active');
+    });
+
+    // Logika untuk merekam dengan simulasi progress bar
+    function startRecording() {
+      const progressBar = document.getElementById('progress-bar');
+      const progress = document.getElementById('progress');
+      const recordingStatus = document.getElementById('recording-status');
+      const successStatus = document.getElementById('success-status');
+
+      progressBar.style.display = 'block';
+      recordingStatus.style.display = 'block';
+      successStatus.style.display = 'none';
+      progress.style.width = '0%';
+
+      let width = 0;
+      const interval = setInterval(() => {
+        width += 10;
+        progress.style.width = `${width}%`;
+        if (width >= 100) {
+          clearInterval(interval);
+          recordingStatus.style.display = 'none';
+          successStatus.style.display = 'block';
+        }
+      }, 300); // Progress meningkat setiap 300ms
+    }
+  </script>
+</body>
+</html>
+
+
